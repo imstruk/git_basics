@@ -10,13 +10,13 @@ def deposit(initial_sum, percent, fixed_period, set_period):
     per = percent / 100
     growth = (1 + per) ** (set_period / fixed_period)
     
-    growth_mounth = (1 + per) ** (set_period / (1/12))
+    growth_mounth = (1 + per) ** ((1/12) / fixed_period)
     
-    growth_1_year = (1 + per) ** (set_period / 1)
+    growth_1_year = (1 + per) ** (1 / fixed_period)
     
-    growth_5_years = (1 + per) ** (set_period / 5)
+    growth_5_years = (1 + per) ** (5 / fixed_period)
 
-    growth_10_yaears = (1 + per) ** (set_period / 10)
+    growth_10_yaears = (1 + per) ** (10 / fixed_period)
 
     return (f"Yields for {set_period} will be: {initial_sum} * {growth}")
     return (f"Yields for 1 mounth will be: {initial_sum} * {growth_mounth}")
